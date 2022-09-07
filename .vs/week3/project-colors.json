@@ -5,7 +5,17 @@
       "ProjectGuid": "6f952cde-5610-4f5a-aaa3-b4eef01b33ab",
       "DisplayName": "week3",
       "ColorIndex": 0
+    },
+    "fb58b7c6-6831-454e-ac3c-04be361f7325": {
+      "ProjectGuid": "fb58b7c6-6831-454e-ac3c-04be361f7325",
+      "DisplayName": "week3",
+      "ColorIndex": 1
+    },
+    "dd6efe8f-294b-4684-a8b2-66aa46fd805b": {
+      "ProjectGuid": "dd6efe8f-294b-4684-a8b2-66aa46fd805b",
+      "DisplayName": "week3",
+      "ColorIndex": 2
     }
   },
-  "NextColorIndex": 1
+  "NextColorIndex": 3
 }
