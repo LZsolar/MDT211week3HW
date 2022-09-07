@@ -14,15 +14,6 @@ namespace MDTwork1023
             Console.WriteLine("----------------------------------");
         }
 
-        public static double coinChange(double coinLeft,double value)
-        {
-            double temp = coinLeft - (coinLeft % value);
-            coinLeft = coinLeft - temp;
-
-            Console.WriteLine("{0}: {1}",value,temp/value);
-            return coinLeft;
-        }
-
         static void Main(string[] args)
         {
             ShopInfo shop = new ShopInfo();
@@ -37,26 +28,41 @@ namespace MDTwork1023
             shopPrint(shop);
 
 
+            coinChange m = new coinChange();
             Console.Write("Please input Money: ");
-            double money = double.Parse(Console.ReadLine());
-            money = coinChange(money, 1000.0);
-            money = coinChange(money, 500.0);
-            money = coinChange(money, 100.0);
-            money = coinChange(money, 50.0);
-            money = coinChange(money, 20.0);
-            money = coinChange(money, 10.0);
-            money = coinChange(money, 2.0);
-            money = coinChange(money, 1.0);
-            money = coinChange(money, 0.50);
-            money = coinChange(money, 0.25);
+            m.money = double.Parse(Console.ReadLine());
+
+            Console.WriteLine("1000: {0}",m.cChange(1000.0));
+            Console.WriteLine("500: {0}", m.cChange(500.0));
+            Console.WriteLine("100: {0}", m.cChange(100.0));
+            Console.WriteLine("50: {0}", m.cChange(50.0));
+            Console.WriteLine("20: {0}", m.cChange(20.0));
+            Console.WriteLine("10: {0}", m.cChange(10.0));
+            Console.WriteLine("2: {0}", m.cChange(2.0));
+            Console.WriteLine("1: {0}", m.cChange(1.0));
+            Console.WriteLine(".50: {0}", m.cChange(0.5));
+            Console.WriteLine(".25: {0}", m.cChange(0.25));
         }
     }
-
     public class ShopInfo
     {
         public string shopName;
         public int shopNumber;
         public string shopOwner;
         public int shopValue;
+    }
+
+    public class coinChange
+    {
+        public double money;
+
+        public double cChange(double value)
+        {
+            double temp = this.money - (this.money % value);
+            this.money = this.money - temp;
+
+            return temp/value;
+        }
+
     }
 }
